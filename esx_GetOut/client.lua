@@ -25,7 +25,7 @@ Citizen.CreateThread(function()
 			ESX.ShowNotification("No stealing Emergency Vehicles. You have "..waitTimeInSeconds.." seconds to get out")
 			Citizen.Wait(waitTime)
 				if IsPedInVehicle(PlayerPedId(), vehicle, false) then
-					TriggerServerEvent("KickPlayer:EmergencyVehicle")
+					TaskLeaveVehicle(ped,vehicle,0)
 				end
 			end
 		end
